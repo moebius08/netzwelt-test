@@ -72,7 +72,7 @@ const Homepage = () => {
   return (
     <>
     <div className="teri-container">
-    <button type="button" class="btn btn-danger" onClick={handleLogout}>Danger</button>
+    <button type="button" class="btn btn-danger" onClick={handleLogout}>Log Out</button>
       <h2>Territories</h2>
       <p>Here are the list of territories:</p>
       <ul id="myUL">
