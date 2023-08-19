@@ -6,12 +6,14 @@ import '../styles/RegisterStyles.css';
 
 
 const Login = () => {
+  const rootUrl = process.env.NODE_ENV === 'production' ? 
+'https://netzwelt-devtest.azurewebsites.net' : ''
   const navigate = useNavigate();
   console.log(process.env)
   const onFinishHandler = async (values) => {
     
     try {
-      const res = await axios.post('SignIn', values, {
+      const res = await axios.post(`${rootUrl}/Account/SignIn`, values, {
         headers: {
           "Content-Type": "text/json",
           "Access-Control-Allow-Origin": "*",

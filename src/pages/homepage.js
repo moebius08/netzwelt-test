@@ -6,9 +6,12 @@ const Homepage = () => {
   const [territories, setTerritories] = useState([]);
   const [activeTerritory, setActiveTerritory] = useState([]);
 
+  const rootUrl = process.env.NODE_ENV === 'production' ? 
+  'https://netzwelt-devtest.azurewebsites.net' : ''  
+
   const getTerritoriesData = async () => {
     try {
-      const res = await axios.get("Territories/All",{
+      const res = await axios.get(`${rootUrl}/Territories/All`,{
         headers: {
           "Content-Type": "application/json",
           "Access-Control-Allow-Origin": "*",
