@@ -13,7 +13,7 @@ const Login = () => {
   '' : ''
     
     try {
-      const res = await axios.post(`${rootUrl}/Account/SignIn`, values, {
+      const res = await axios.post(`/Account/SignIn`, values, {
         headers: {
           "Access-Control-Allow-Origin": "*",
         },
