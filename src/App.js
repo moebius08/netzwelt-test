@@ -6,12 +6,12 @@ import PublicRoute from './components/PublicRoutes';
 
 function App() {
   return (
-    <HashRouter>
+    <BrowserRouter>
         <Routes>
       <Route path='/' element={<ProtectedRoutes> <Homepage /> </ProtectedRoutes>} />
       <Route path='/Account/Login' element={<PublicRoute><Login /></PublicRoute>}/>
       </Routes>
-    </HashRouter>
+    </BrowserRouter>
     );
 }
 
