@@ -1,15 +1,21 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import '../styles/HomePage.css';
+import { useNavigate } from "react-router-dom";
+import { message } from "antd";
 
 const Homepage = () => {
   const [territories, setTerritories] = useState([]);
   const [activeTerritory, setActiveTerritory] = useState([]);
+  const navigate = useNavigate();
+
+  const handleLogout = () => {
+    localStorage.clear();
+    message.success('Logout Successfuly')
+    navigate("/Account/Login");
+}
 
   const getTerritoriesData = async () => {
-
-
-
     try {
       const res = await axios.get(`/Territories/All`,{
         headers: {
@@ -64,13 +70,16 @@ const Homepage = () => {
   };
                 
   return (
-    <div>
+    <>
+    <div className="teri-container">
+    <button type="button" class="btn btn-danger" onClick={handleLogout}>Danger</button>
       <h2>Territories</h2>
       <p>Here are the list of territories:</p>
       <ul id="myUL">
         {territories.filter(t => t.parent === null).map(territory => renderTerritory(territory, 0))}
       </ul>
     </div>
+    </>
   );
 };
 

@@ -1,3 +1,4 @@
+
 ul, #myUL {
     list-style-type: none;
    }
@@ -31,3 +32,7 @@ ul, #myUL {
     display: block;
    }
   
+.teri-container {
+    padding-left: 20px;
+    padding-top: 20px;
+}
