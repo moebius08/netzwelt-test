@@ -7,11 +7,10 @@ import '../styles/RegisterStyles.css';
 
 const Login = () => {
   const navigate = useNavigate();
-  console.log(process.env)
   const onFinishHandler = async (values) => {
     
     try {
-      const res = await axios.get('/Account/SignIn', values, {
+      const res = await axios.postForm('/Account/SignIn', values, {
         headers: {
           "Content-Type": "text/json",
           "Access-Control-Allow-Origin": "*",
