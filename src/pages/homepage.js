@@ -8,7 +8,12 @@ const Homepage = () => {
 
   const getTerritoriesData = async () => {
     try {
-      const res = await axios.get("https://netzwelt-devtest.azurewebsites.net/Territories/All");
+      const res = await axios.get("Territories/All",{
+        headers: {
+          "Content-Type": "application/json",
+          "Access-Control-Allow-Origin": "*",
+        },
+        mode: "cors",});
       if (res.data) {
         setTerritories(res.data.data);
       }
@@ -38,7 +43,7 @@ const Homepage = () => {
         {children.length > 0 ? (
           <span
             id={territory.id}
-            className="caret"
+            className={`caret ${activeTerritory.includes(territory.id) ? "caret-down" : ""}`}
             onClick={(event) => handleCaretClick(event, territory.id)}
           >
             {territory.name}
@@ -54,7 +59,7 @@ const Homepage = () => {
       </li>
     );
   };
-              
+                
   return (
     <div>
       <h2>Territories</h2>
