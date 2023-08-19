@@ -8,7 +8,7 @@ const Homepage = () => {
 
   const getTerritoriesData = async () => {
     try {
-      const res = await axios.get("/Territories/All");
+      const res = await axios.get("https://netzwelt-devtest.azurewebsites.net/Territories/All");
       if (res.data) {
         setTerritories(res.data.data);
       }
