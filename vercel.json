@@ -1,0 +1,13 @@
+{
+    "proxy": {
+      "/Account": {
+        "target": "https://netzwelt-devtest.azurewebsites.net",
+        "changeOrigin": true
+      },
+      "/Territories": {
+        "target": "https://netzwelt-devtest.azurewebsites.net",
+        "changeOrigin": true
+      }
+    }
+  }
+  
