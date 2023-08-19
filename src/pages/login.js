@@ -10,12 +10,10 @@ const Login = () => {
   const onFinishHandler = async (values) => {
     
     try {
-      const res = await axios.postForm('/Account/SignIn', values, {
+      const res = await axios.post('/Account/SignIn', values, {
         headers: {
-          "Content-Type": "text/json",
           "Access-Control-Allow-Origin": "*",
         },
-        mode: "cors",
       });
       if (res.data) {
         localStorage.setItem("roles", JSON.stringify(res.data.roles));
