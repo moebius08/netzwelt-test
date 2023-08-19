@@ -7,8 +7,9 @@ import '../styles/RegisterStyles.css';
 
 const Login = () => {
   const navigate = useNavigate();
-
+  console.log(process.env)
   const onFinishHandler = async (values) => {
+    
     try {
       const res = await axios.post('/Account/SignIn', values);
       if (res.data) {

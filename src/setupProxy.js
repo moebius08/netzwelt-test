@@ -2,9 +2,16 @@ const { createProxyMiddleware } = require('http-proxy-middleware');
 
 module.exports = function(app) {
   app.use(
-    '/api', // Change this path to match your API endpoints
+    '/Account',
     createProxyMiddleware({
-      target: 'https://netzwelt-devtest.azurewebsites.net',
+      target: `REACT_APP_URL`,
+      changeOrigin: true,
+    })
+  );
+  app.use(
+    '/Territories',
+    createProxyMiddleware({
+      target: `REACT_APP_URL`,
       changeOrigin: true,
     })
   );
