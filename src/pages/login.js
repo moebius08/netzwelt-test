@@ -10,10 +10,10 @@ const Login = () => {
   const onFinishHandler = async (values) => {
 
     const rootUrl = process.env.NODE_ENV === 'production' ? 
-  '' : ''
+  'https://netzwelt-devtest.azurewebsites.net' : ''
     
     try {
-      const res = await axios.post(`/Account/SignIn`, values, {
+      const res = await axios.post(`${rootUrl}/Account/SignIn`, values, {
         headers: {
           "Access-Control-Allow-Origin": "*",
         },

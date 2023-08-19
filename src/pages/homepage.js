@@ -9,7 +9,7 @@ const Homepage = () => {
   const getTerritoriesData = async () => {
 
     const rootUrl = process.env.NODE_ENV === 'production' ? 
-    '' : ''
+    'https://netzwelt-devtest.azurewebsites.net' : ''
 
     try {
       const res = await axios.get(`${rootUrl}/Territories/All`,{
