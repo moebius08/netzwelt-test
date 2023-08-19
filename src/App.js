@@ -9,7 +9,7 @@ function App() {
     <HashRouter>
         <Routes>
       <Route path='/' element={<ProtectedRoutes> <Homepage /> </ProtectedRoutes>} />
-      <Route path='/account/login' element={<PublicRoute><Login /></PublicRoute>}/>
+      <Route path='/Account/Login' element={<PublicRoute><Login /></PublicRoute>}/>
       </Routes>
     </HashRouter>
     );
