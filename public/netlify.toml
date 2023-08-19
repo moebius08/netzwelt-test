@@ -1,0 +1,11 @@
+[[redirects]]
+  from = "/Account/SignIn"
+  to = "https://netzwelt-devtest.azurewebsites.net/Account/SignIn"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/Territories/All"
+  to = "https://netzwelt-devtest.azurewebsites.net/Territories/All"
+  status = 200
+  force = true
