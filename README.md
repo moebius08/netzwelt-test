@@ -1,3 +1,12 @@
+# Use Case Home Page ('/');
+
+![image](https://github.com/moebius08/netzwelt-test/assets/72979484/529f6c06-c90f-49fa-bc2c-e80ac8cdbb42)
+
+# Use Case Login ('/account/login');
+
+![image](https://github.com/moebius08/netzwelt-test/assets/72979484/f9192cb4-87e9-45ef-ae07-04481fb46e6a)
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -68,3 +77,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+_________________________________________________________________________________________________________
+
+
