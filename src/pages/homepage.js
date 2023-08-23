@@ -47,6 +47,7 @@ const Homepage = () => {
     
   const renderTerritory = (territory, level) => {
     const children = territories.filter(t => t.parent === territory.id);
+    console.log(children)
     return (
       <li key={territory.id}>
         {children.length > 0 ? (
